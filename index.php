@@ -12,13 +12,13 @@
     <h2>Mes informations personelles : </h2>
     <div>
         <ul>
-        <li><p>Nom :</p><p id="nom"></p></li>
-        <li><p>Prénom :</p><p id="prenom"></p></li>
-        <li><p>RIB :</p><p id="rib"></p></li>
-        <li><p>Date de Naissance :</p><p id="naissance"></p></li>
-        <li><p>Civilité:</p><p id="civilite"></p></li>
-        <li><p>Adresse Mail</p><p id="mail"></p></li>
-        <li><p>Adresse :</p><p id="adresse"></p></li>
+        <li> Nom :Fontaine </li>
+        <li>Prénom : Piere</li>
+        <li> RIB : FR2229812193891</li>
+        <li>Date de Naissance : 23/12/1998</li>
+        <li>Civilité: Célibataire</li>
+        <li>Adresse Mail: Piere@exemple.com</li>
+        <li>Adresse : 9 rue Berthold, Calais ,France</li>
         <ul>
 
     </div>
