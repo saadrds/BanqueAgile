@@ -78,7 +78,7 @@ CREATE TABLE `compte` (
   `code` int(11) NOT NULL,
   `solde` float DEFAULT 0,
   `Rib` int(11) DEFAULT NULL,
-  `date_ouvert` date DEFAULT current_timestamp(),
+  `date_ouvert` date,
   `id_cli` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -99,7 +99,7 @@ INSERT INTO `compte` (`code`, `solde`, `Rib`, `date_ouvert`, `id_cli`) VALUES
 CREATE TABLE `op_espece` (
   `id_op` int(11) NOT NULL,
   `type` varchar(20) DEFAULT NULL,
-  `date` date DEFAULT current_timestamp(),
+  `date` date ,
   `montant` float DEFAULT NULL,
   `id_cli` int(11) DEFAULT NULL,
   `motif` varchar(30) DEFAULT NULL
@@ -121,7 +121,7 @@ INSERT INTO `op_espece` (`id_op`, `type`, `date`, `montant`, `id_cli`, `motif`) 
 
 CREATE TABLE `op_virement` (
   `id_op` int(11) NOT NULL,
-  `date` date DEFAULT current_timestamp(),
+  `date` date,
   `montant` float DEFAULT NULL,
   `idC_emetteur` int(11) DEFAULT NULL,
   `idC_recepteur` int(11) DEFAULT NULL,

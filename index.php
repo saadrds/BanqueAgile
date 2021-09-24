@@ -8,19 +8,26 @@
     <title>Document</title>
 </head>
 <body>
+<?php require 'connection.php';
+    $myC = new myConnection();
+    $monClient = $myC->findClientById(1);
+    while ($row = $monClient -> fetch()) {
+        
+?>
     <h1>Bienvenue à votre Espace Client</h1>
     <h2>Mes informations personelles : </h2>
     <div>
         <ul>
-        <li> Nom :Fontaine </li>
-        <li>Prénom : Piere</li>
-        <li> RIB : FR2229812193891</li>
-        <li>Date de Naissance : 23/12/1998</li>
-        <li>Civilité: Célibataire</li>
-        <li>Adresse Mail: Piere@exemple.com</li>
-        <li>Adresse : 9 rue Berthold, Calais ,France</li>
+        <li> Nom : <?php echo $row['nomCli']; ?></li>
+        <li>Prénom : <?php echo $row['prenomCli']; ?></li>
+        <li>Date de Naissance : <?php echo $row['date_nais']; ?></li>
+        <li>Civilité: <?php echo $row['civilite']; ?></li>
+        <li>Adresse Mail: <?php echo $row['email']; ?></li>
+        <li>Adresse : <?php echo $row['adress']; ?></li>
+        <li>tel : <?php echo $row['tel']; ?></li>
+        <li>Agence : <?php echo $row['nomAgence']; ?></li>
         <ul>
-
+<?php }?>
     </div>
 </body>
 </html>
