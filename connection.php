@@ -48,6 +48,20 @@ public function findClientById($fname){
     
 }
 
+public function findCompteById($fname){
+    $qry = 'select * from compte where id_cli =' . $fname; // Your query
+    $result = $this->connection -> query($qry); // execute query
+    return $result;
+    
+}
+
+public function findTransactionsById($fname){
+    $qry = 'select * from op_espece where id_cli =' . $fname; // Your query
+    $result = $this->connection -> query($qry); // execute query
+    return $result;
+    
+}
+
 }
 
 ?>

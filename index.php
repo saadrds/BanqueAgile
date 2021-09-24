@@ -11,11 +11,13 @@
 <?php require 'connection.php';
     $myC = new myConnection();
     $monClient = $myC->findClientById(1);
+    
     while ($row = $monClient -> fetch()) {
         
 ?>
     <h1>Bienvenue à votre Espace Client</h1>
     <h2>Mes informations personelles : </h2>
+    <a href="compte.php"><Button>Consulter Mon compte</Button></a>
     <div>
         <ul>
         <li> Nom : <?php echo $row['nomCli']; ?></li>
