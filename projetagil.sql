@@ -225,6 +225,18 @@ ALTER TABLE `op_virement`
   ADD CONSTRAINT `op_virement_ibfk_2` FOREIGN KEY (`idC_recepteur`) REFERENCES `compte` (`code`) ON DELETE SET NULL;
 COMMIT;
 
+create table op_virement_en_attente
+		(id_op int primary key auto_increment,
+		date date default now(),
+		montant float,
+		idC_emetteur int,
+		idC_recepteur int,
+           motif varchar(30),
+		foreign key(idC_emetteur) references compte(code)
+		 on delete set null,
+		foreign key(idC_recepteur) references compte(code)
+		 on delete set null);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
