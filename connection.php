@@ -33,12 +33,22 @@ try {
 }
 
 public function getAllClients(){
-    $qry = 'select * from client;'; // Your query
+    $qry = 'SELECT * FROM compte inner join client
+    where client.id_cli = compte.id_cli'; // Your query
     $result = $this->connection -> query($qry); // execute query
     return $result;
     while ($row = $result -> fetch()) {
     $id = $row['nomCli'];
     echo $id;
+}}
+
+public function getAllAttents(){
+  $qry = 'SELECT * FROM op_virement_en_attente'; // Your query
+  $result = $this->connection -> query($qry); // execute query
+  return $result;
+  while ($row = $result -> fetch()) {
+  $id = $row['nomCli'];
+  echo $id;
 }}
 
 public function findClientById($fname){
